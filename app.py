@@ -9,9 +9,9 @@ app = Flask(__name__)
 api = Api(app)
 
 
-class Home(Resource):
-    def get(self):
-        return "Welcome to the gogoanime api", 200
+@app.route('/')
+def index():
+    return "<h1>Welcome to the gogoanime api</h1>"
 
 
 class AnimeSearch(Resource):
@@ -144,7 +144,6 @@ class AnimeGenre(Resource):
         return to_send_data, 200
 
 
-api.add_resource(Home, '/')
 api.add_resource(AnimeSearch, '/api/search/<string:name>')
 api.add_resource(AnimeDetail, '/api/anime/<string:animeId>')
 api.add_resource(

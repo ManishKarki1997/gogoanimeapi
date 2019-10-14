@@ -11,20 +11,19 @@ api = Api(app)
 
 @app.route('/')
 def index():
-    return """<h1 style='margin-bottom:5rem;'>Welcome to the gogoanime api</h1>
-            <h2 style='margin-bottom:1rem;'>How to use the api</h2>
-                <h2>Each api should be called at <span> https://gogoanimeapi.herokuapp.com/api/</span></h2>
-    <h2>To fetch animes of certain genres, the api endpoint is
-        <span>https://gogoanimeapi.herokuapp.com/api/genre/{genre_name}/{page_number}</span> </h2>
-    <p>To search for certain anime, the api endpoint is https://gogoanimeapi.herokuapp.com/api/search/{anime_name}</p>
-    <p>You get a unique anime_id for each anime that you can use to search for that anime below.</p>
+    return """
+            <h1 style='margin-bottom:5rem;'>Each api should be called at <span> https://gogoanimeapi.herokuapp.com/api/</span></h1>
+    <h3>To fetch animes of certain genres, the api endpoint is
+        <i>https://gogoanimeapi.herokuapp.com/api/genre/{genre_name}/{page_number}</i> </h3>
+    <h3>To search for certain anime, the api endpoint is https://gogoanimeapi.herokuapp.com/api/search/{anime_name}</h3>
     <i>for eg. https://gogoanimeapi.herokuapp.com/api/search/Hunter X Hunter</i>
-    <h2>To fetch details of an anime, the api endpoint is <span>
-            https://gogoanimeapi.herokuapp.com/api/anime/{anime-id}</span></h2>
-    <p>Note that anime-id is sent when you search for an anime so you must use this exact anime id for it to work. </p>
+    <p>Note that You get a unique anime_id for each anime that you can use to search for that anime below.</p>
+    <h3>To fetch details of an anime, the api endpoint is <i>
+            https://gogoanimeapi.herokuapp.com/api/anime/{anime-id}</i></h3>
+    <i>for eg. https://gogoanimeapi.herokuapp.com/api/anime/hunter-hunter</i>
+    <h3>To fetch video links of an episode, the api endpoint is <i>
+            https://gogoanimeapi.herokuapp.com/api/watch/{anime_id}/{episode_number}</i></h3>
     <i>for eg. https://gogoanimeapi.herokuapp.com/api/anime/hunter-x-hunter/20</i>
-    <h3>To fetch video links of an episode, the api endpoint is <span>
-            https://gogoanimeapi.herokuapp.com/api/watch/{anime_id}/{episode_number}</span></h3>
     """
 
 

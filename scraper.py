@@ -146,4 +146,6 @@ api.add_resource(
 api.add_resource(AnimeGenre, '/api/genre/<string:genre>/<string:page_number>')
 
 
-app.run(debug=True)
+# app.run(debug=True)
+if __name__ == '__main__':
+    app.run()

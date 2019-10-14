@@ -9,7 +9,7 @@ app = Flask(__name__)
 api = Api(app)
 
 
-class AnimeGenre(Resource):
+class Home(Resource):
     def get(self):
         return "Welcome to the gogoanime api", 200
 
